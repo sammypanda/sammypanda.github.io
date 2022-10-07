@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
+:root {
+    --pet-height: 10px;
+}
+
+@keyframes appear {
+    from { opacity: 0%; }
+    to { opacity: 100%; }
+}
+
+@keyframes expand {
+    from { padding: 10%; opacity: 100%; }
+    to { padding: 0%; opacity: 100%; }
+}
+
+@keyframes sunrise { 
+    from { background-size: 200% 200%; }
+    to { background-size: 100% 100%; }
+}
+
+@keyframes spread {
+    from { width: 0%; }
+    to { width: 60%; }
+}
+
+@keyframes turny {
+    from { transform: rotate(0deg) }
+    25% { transform: rotate(10deg) }
+    50% { transform: rotate(0deg) }
+    85% { transform: rotate(-10deg) }
+    to { transform: rotate(0deg) }
+}
+
+@keyframes pet {
+    from { bottom: -200px; }
+    to { bottom: var(--pet-height); }
+}
+
+html, body {
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+html {
+    animation-name: sunrise;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+a {
+    all: unset;
+    color: unset;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#theme {
+    z-index: 10;
+    border-radius: 100%;
+    background-color: var(--theme);
+    padding: 5px;
+    margin: 1% 1% 0 0;
+    color: var(--theme);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.socials li {
+    display: flex;
+    gap: 8px;
+}
+
+.pet-wrap {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pet 2s ease 1s 1 forwards;
+}
+
+#pet {
+    height: 50px;
+    width: auto;
+    bottom: var(--pet-height);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    animation: turny paused 1.5s infinite linear;
+    cursor: grab;
+    transition: all 0.5s;
+}
+
+.petegories {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    gap: 10px;
+}
+
+.selected {
+    text-decoration: underline;
+}
+
+.header, .projects, .descriptor, #info {
+    font-family: 'Dosis', sans-serif;
+    color: var(--theme);
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+}
+
+.images img, .images video {
+    max-width: 90%;
+    height: fit-content;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    cursor: default;
+}
+
+.header h1 {
+    opacity: 0%;
+    animation: appear 1s .5s forwards;
+    font-size: 40px;
+    padding-top: 2%;
+    margin: auto;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+.header h2 {
+    text-align: center;
+    line-height: 0;
+    font-size: 16px;
+}
+
+h1::selection, a::selection, p::selection, img::selection {
+    all: unset;
+}
+
+#info::selection, #info a::selection {
+    color: pink;
+}
+
+.header hr {
+    border: unset;
+    margin-bottom: 0;
+    background-color: var(--theme);
+    height: 5px;
+    animation: spread 1s forwards;
+}
+
+.header ul {
+    all: unset;
+    display: flex;
+    margin-top: 8px;
+    gap: 10px;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    text-decoration-color: inherit;
+}
