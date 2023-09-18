@@ -133,19 +133,15 @@ themeToggle = (theme) => {
  * changing the portfolio category
  */
 changePortfolio = (title, category) => {
-    console.log(document.getElementsByClassName('projects'));
-
     const pcategories = document.getElementsByClassName('projects'); // portfolio categories
     const ptitles = document.getElementsByClassName('descriptor'); // the titles of the portfolios
     const currcategory = document.getElementById(category); // current selected category
 
     [...pcategories].forEach(category => {
-        // console.log(category)
         category.style.display = "none"
     });
 
     [...ptitles].forEach(ptitle => {
-        console.log(ptitle)
         ptitle.classList.remove("selected")
     })
 
@@ -162,3 +158,22 @@ if (localStorage.theme) {
 } else {
     themeToggle("light"); // Default Theme
 }
+
+/**
+ * onload hook
+ */
+window.onload = function () {
+    // remove no-script warning
+    document.getElementById("no-script-warning").remove();
+
+    // reduce jank by waiting until js (and likely css) is done loading
+    document.getElementById("page").style.visibility = "visible"
+}
+
+/**
+ * instantiate defaults
+ */
+changePortfolio(
+    document.getElementsByClassName("petegories")[0].children[1], 
+    "web"
+)
