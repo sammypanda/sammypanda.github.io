@@ -37,8 +37,15 @@
         case "emi":
             card = new Card("Emi", 
                 "<p>You really are the best and i don't know how i was able to stumble into you!</p><p>I'm very glad i did and i hope i get to stick around and bother you like i do now every day into the forever future.<p>You accept me and my unusual bits n pieces even when it isn't convenient, and you show me so much care and passion. You're vulnerable with me so often and i feel so safe to be that way with you too.</p><p>Thank you so much for being my partner! Happy valentines!</p>", 
-                "cat.png",
+                null,
                 "My dearest, <span style='font-style: italic'>emipants</span>"
+            );
+            break;
+        case "billy":
+            card = new Card("Billy", 
+                "<p>I'm so overwhelmingly glad i got to meet you! I feel this way almost every day now >.<</p><p>I know you already know this, because I'm silly and always drool over you. But you're so great and i love reminding you of it.</p><p>Thank you for being so understanding of me; compassionate and so so kind. I feel so lucky to be in your world!</p><p>Every time i talk to you i feel so happy and it makes me want to do and be the best I can. You're my valentine every day! &#x1F61B;", 
+                "billy.png",
+                null
             );
             break;
     }
@@ -94,7 +101,8 @@
                     document.getElementById("card-main").style.animation = "1.2s linear 0s 2 alternate forwards running turn-half";
 
                     setTimeout(() => {
-                        document.getElementById("card-main").innerHTML = "<img src='assets/img/cat.png'/>";
+                        document.getElementById("card-main").innerHTML = `<img src='assets/img/friends/${drawing}'/>`;
+                        document.getElementById("card-main").style.justifyContent = "center"
 
                         setTimeout(() => {
                             document.getElementById("card-main").style.animation = "";
