@@ -132,6 +132,10 @@ a {
     color: var(--theme);
 }
 
+.no-margin {
+    margin: 0 !important;
+}
+
 p {
     filter:opacity(0.9)
 }
@@ -261,6 +265,22 @@ h1::selection, a::selection, p::selection, img::selection {
 #valentines-card .card-footer {
     color: #636363;
     font-style: italic;
+}
+
+#femboy-events-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px 10px 10px;
+}
+
+#femboy-events-container iframe {
+    border: 0;
+    width: 50%;
+    height: 100%;
+    width: 100%;
 }
 
 /* #valentines-card .card:hover {
