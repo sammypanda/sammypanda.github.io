@@ -47,7 +47,7 @@ html, body, #page {
 }
 
 #no-script-warning {
-    animation: 2s linear 3s appear 1 forwards;
+    animation: 2s linear 5s appear 1 forwards;
 }
 
 #no-script-warning p {
