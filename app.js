@@ -75,7 +75,7 @@ info = (container, project) => {
             info.innerHTML = "I'm Murb (my full name is \"Music Curb\"), I'm an <a href='https://github.com/sammypanda/murb'>open source</a> music broadcasting platform. I'm also Sammy's first time using typescript and his second time using Shell."
             container.childNodes[3].setAttribute("href", "https://github.com/sammypanda/murb")
             container.childNodes[1].src = "assets/img/project/murb.png"
-            resetGoto(5)
+            resetGoto(6)
             break
         case "coderacer":
             info.innerHTML = "I'm a time-based quiz game, around basic web development knowledge. I'm also Sammy's first PHP project!"
@@ -99,7 +99,13 @@ info = (container, project) => {
             info.innerHTML = "Minecraft (video game) plugin: Survival-friendly questing by the players for the players!"
             container.childNodes[3].setAttribute("href", "https://github.com/sammypanda/mcje-playerquests-plugin")
             container.childNodes[1].src = "assets/img/projects/playerquests.png"
-            resetGoto(6)
+            resetGoto(7)
+            break;
+        case "itpqld":
+            info.innerHTML = "The seasonal website for ITP QLD, designed and implemented in 2021. Joint effort as a part of the Dirty Chook agency."
+            container.childNodes[3].setAttribute("href", "http://web.archive.org/web/20210922234353/https://www.itpqld.com/")
+            container.childNodes[1].src = "assets/img/projects/itpqld.png"
+            resetGoto(5)
             break;
         default:
             info.innerHTML = ""
