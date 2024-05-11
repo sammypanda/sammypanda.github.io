@@ -95,6 +95,12 @@ info = (container, project) => {
             container.childNodes[1].src = "assets/img/project/rnotes-v.png"
             resetGoto(4)
             break
+        case "playerquests":
+            info.innerHTML = "Minecraft (video game) plugin: Survival-friendly questing by the players for the players!"
+            container.childNodes[3].setAttribute("href", "https://github.com/sammypanda/mcje-playerquests-plugin")
+            container.childNodes[1].src = "assets/img/projects/playerquests.png"
+            resetGoto(6)
+            break;
         default:
             info.innerHTML = ""
             break
