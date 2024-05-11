@@ -75,7 +75,7 @@ info = (container, project) => {
             info.innerHTML = "I'm Murb (my full name is \"Music Curb\"), I'm an <a href='https://github.com/sammypanda/murb'>open source</a> music broadcasting platform. I'm also Sammy's first time using typescript and his second time using Shell."
             container.childNodes[3].setAttribute("href", "https://github.com/sammypanda/murb")
             container.childNodes[1].src = "assets/img/project/murb.png"
-            resetGoto(7)
+            resetGoto(8)
             break
         case "coderacer":
             info.innerHTML = "I'm a time-based quiz game, around basic web development knowledge. I'm also Sammy's first PHP project!"
@@ -99,7 +99,7 @@ info = (container, project) => {
             info.innerHTML = "Minecraft (video game) plugin: Survival-friendly questing by the players for the players!"
             container.childNodes[3].setAttribute("href", "https://github.com/sammypanda/mcje-playerquests-plugin")
             container.childNodes[1].src = "assets/img/projects/playerquests.png"
-            resetGoto(8)
+            resetGoto(9)
             break;
         case "itpqld":
             info.innerHTML = "The seasonal website for ITP QLD, designed and implemented in 2021. Joint effort as a part of the Dirty Chook agency."
@@ -112,6 +112,12 @@ info = (container, project) => {
             container.childNodes[3].setAttribute("href", "http://web.archive.org/web/20211128075947/https://bookkeeping.solutions/")
             container.childNodes[1].src = "assets/img/projects/bksolutions.png"
             resetGoto(6)
+            break;
+        case "maidtoclean":
+            info.innerHTML = "Pamphlet static Nuxt/Vue website; consulted, designed and built by me for a small Tasmanian business."
+            container.childNodes[3].setAttribute("href", "https://maidtocleantas.com")
+            container.childNodes[1].src = "assets/img/projects/maidtocleantas.png"
+            resetGoto(7)
             break;
         default:
             info.innerHTML = ""
