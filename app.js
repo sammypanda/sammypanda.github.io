@@ -4,15 +4,6 @@
 const pet = document.getElementById('pet')
 
 /**
- * remove pet if portfolio.html can be found anywhere in the url
- * and add overflow-y to the page
- */
-if (window.location.href.split("/").find(part => part == "portfolio.html")) {
-    pet.remove()
-    document.getElementById("overflowy").style["overflow-y"] = "auto"; 
-}
-
-/**
  * set the play state of the kitty turny animation
  * @param {string} id
  */
@@ -196,9 +187,25 @@ window.onload = function () {
 }
 
 /**
- * instantiate defaults
+ * remove pet if portfolio.html can be found anywhere in the url
+ * + add overflow-y to the page
+ * + refresh live links 
+ * + instantiate defaults
  */
-changePortfolio(
-    document.getElementsByClassName("petegories")[0].children[1], 
-    "web"
-)
+if (window.location.href.split("/").find(part => part == "portfolio.html")) {
+    pet.remove()
+    document.getElementById("overflowy").style["overflow-y"] = "auto"; 
+
+    // find srcs for api links
+    fetch("https://eapi.pcloud.com/getpublinkdownload?code=XZJqoJZW2R5q7SS59b1iBfPWgezs5cuiRS7", {})
+        .then((res) => res.json())
+        .then((object) => {
+            document.getElementById("plainroom-video").src = "https://" + object.hosts[0] + object.path;
+        });
+
+    // instantiate defaults
+    changePortfolio(
+        document.getElementsByClassName("petegories")[0].children[1], 
+        "web"
+    )
+}
