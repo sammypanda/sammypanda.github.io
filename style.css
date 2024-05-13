@@ -154,6 +154,11 @@ p {
     height: fit-content;
 }
 
+#pixely .images img, #pixely .images video {
+    height: auto;
+    height: 38vmin;
+}
+
 .pointer {
     cursor: pointer;
 }

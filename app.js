@@ -169,7 +169,8 @@ changePortfolio = (title, category) => {
         ptitle.classList.remove("selected")
     })
 
-    document.getElementById('info').style.visibility = "hidden"
+    document.getElementById('info').style.visibility = "hidden";
+    this.info(); // reset info section
     currcategory.style.display = "flex";
     title.classList.add("selected")
 }
