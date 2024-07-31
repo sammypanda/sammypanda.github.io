@@ -203,6 +203,12 @@ if (window.location.href.split("/").find(part => part == "portfolio.html")) {
             document.getElementById("plainroom-video").src = "https://" + object.hosts[0] + object.path;
         });
 
+    fetch("https://eapi.pcloud.com/getpublinkdownload?code=XZLVggZAm9DhEMzq37atS4snJfhIVsuRY2V", {})
+        .then((res) => res.json())
+        .then((object) => {
+            document.getElementById("littlepumpkin-gif").src = "https://" + object.hosts[0] + object.path;
+        });
+
     // instantiate defaults
     changePortfolio(
         document.getElementsByClassName("petegories")[0].children[1], 
