@@ -16,6 +16,12 @@
                 return;
             }
 
+	    // check if they are looking for ConmanoRatings
+	    if (currentPath.startsWith("/conmanoratings")) {
+	        window.location.href = `sammypanda.github.io/ConmanoRatings`;
+		return;
+	    }
+
             // if all else fails, show the 404
             document.head.title = "404 :("
             document.body.style.display = "block";
