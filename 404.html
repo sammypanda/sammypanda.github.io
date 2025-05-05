@@ -29,6 +29,7 @@
                     .then((json) => {
                         window.location.href = json.assets[0].browser_download_url;
                     });
+                return;
             }
 
             // if all else fails, show the 404
