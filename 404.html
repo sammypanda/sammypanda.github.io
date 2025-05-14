@@ -10,7 +10,7 @@
             const currentPath = window.location.pathname;
             
             // check if they are looking for a playerquests doc
-            if (currentPath.startsWith("/docs/playerquests/v")) {
+            if (currentPath.startsWith("/docs/playerquests/")) {
                 const version = currentPath.split("/").pop(); // Get the version number
                 window.location.href = `https://github.com/sammypanda/MCJE-PlayerQuests-Plugin/blob/${version}/branding/docs/README.md`;
                 return;
